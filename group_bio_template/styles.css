@@ -94,6 +94,7 @@ button:hover {
 }
 
 
+
 /* ===== MODERN TEAM PAGE DESIGN ===== */
 
 /* General page styling */
@@ -267,4 +268,37 @@ button {
     letter-spacing: 0.2px;
 }
 
+
+
+/* Logo Animation: Gentle float anima */
+.team-logo{
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* Logo hover effect: spin and grow */
+.team-logo:hover {
+    animation: logoSpin 0.8s ease forwards;
+}
+
+@keyframes logoSpin {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-logo,
+    .team-logo:hover {
+        animation: none;
+    }
+}
 
