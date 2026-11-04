@@ -88,3 +88,47 @@ button {
 button:hover {
     background: #0056b3;
 }
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.moodboard {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.moodboard h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.moodboard a,
+.moodboard span {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.moodboard a:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
