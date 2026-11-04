@@ -88,3 +88,19 @@ button {
 button:hover {
     background: #0056b3;
 }
+
+/* Logo Animation: Gentle float anima */
+.team-logo{
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* Logo hover effect: spin and grow */
+.team-logo:hover {
+  transform: rotate(360deg) scale(1.1);
+  transition: transform 0.8s ease;
+}
