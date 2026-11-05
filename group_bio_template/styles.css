@@ -1,4 +1,8 @@
 /* General page styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -131,4 +135,212 @@ button:hover {
     background-color: #ddd;
     transform: scale(1.05);
     transition: 0.2s;
+}
+
+
+/* ===== MODERN TEAM PAGE DESIGN ===== */
+
+/* General page styling */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #edf2ff, #f8fafc);
+    color: #1e293b;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    text-align: center;
+    padding: 55px 20px 45px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.18);
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 30px;
+}
+
+/* Team logo */
+.team-logo {
+    width: 150px;
+    height: auto;
+    border-radius: 16px;
+    margin: 10px auto 25px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.team-logo:hover {
+    transform: scale(1.07);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #2563eb, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 6px;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* Team member cards */
+.team-member,
+.member-card,
+.team-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 30px 24px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.team-member:hover,
+.member-card:hover,
+.team-card:hover {
+    transform: translateY(-8px);
+    border-color: #93c5fd;
+    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.15);
+}
+
+/* Team member names */
+.team-member h2,
+.team-member h3,
+.member-card h2,
+.member-card h3,
+.team-card h2,
+.team-card h3 {
+    color: #0f172a;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+/* Member descriptions */
+.team-member p,
+.member-card p,
+.team-card p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    button {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+
+    .team-member,
+    .member-card,
+    .team-card {
+        padding: 22px 18px;
+    }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    button,
+    .team-logo,
+    .team-member,
+    .member-card,
+    .team-card {
+        transition: none;
+    }
+}
+
+
+/* Updated website typography */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+
+
+/* Logo Animation: Gentle float anima */
+.team-logo{
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* Logo hover effect: spin and grow */
+.team-logo:hover {
+    animation: logoSpin 0.8s ease forwards;
+}
+
+@keyframes logoSpin {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-logo,
+    .team-logo:hover {
+        animation: none;
+    }
 }
